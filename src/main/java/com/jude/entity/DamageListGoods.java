@@ -11,7 +11,6 @@ import javax.persistence.Transient;
 
 /**
  * 报损单商品实体
- * @author jude
  *
  */
 @Entity

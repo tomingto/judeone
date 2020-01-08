@@ -1,24 +1,13 @@
 package com.jude.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.Transient;
-
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
 /**
  * 进货单
- * @author java1234_小锋 老师
  *
  */
 @Entity

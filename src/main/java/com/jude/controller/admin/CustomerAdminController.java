@@ -1,11 +1,9 @@
 package com.jude.controller.admin;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
+import com.jude.entity.Customer;
+import com.jude.entity.Log;
+import com.jude.service.CustomerService;
+import com.jude.service.LogService;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.data.domain.Sort.Direction;
@@ -14,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jude.entity.Customer;
-import com.jude.entity.Log;
-import com.jude.service.CustomerService;
-import com.jude.service.LogService;
+import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 后台管理客户Controller
@@ -94,8 +92,7 @@ public class CustomerAdminController {
 	
 	/**
 	 * 删除客户信息
-	 * @param id
-	 * @param response
+	 * @param ids
 	 * @return
 	 * @throws Exception
 	 */
@@ -107,7 +104,7 @@ public class CustomerAdminController {
 		for(int i=0;i<idsStr.length;i++){
 			int id=Integer.parseInt(idsStr[i]);
 			logService.save(new Log(Log.DELETE_ACTION,"删除客户信息"+customerService.findById(id)));  // 写入日志
-			customerService.delete(id);							
+			customerService.delete(id);
 		}
 		resultMap.put("success", true);
 		return resultMap;
