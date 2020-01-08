@@ -340,7 +340,7 @@
 	 					供应商：<select class="easyui-combobox"  id="supplierId" name="supplier.id" style="width: 200px;" required=true data-options="required:true,panelHeight:'auto',valueField:'id',textField:'name',url:'/admin/supplier/comboList'"></select>
  					</td>
  					<td>
- 						&nbsp;&nbsp;&nbsp;&nbsp;应付金额：<input type="text" id="amountPayable" name="amountPayable" size="10" readonly="readonly" class="easyui-validatebox" required="true"/>
+ 						&nbsp;&nbsp;&nbsp;&nbsp;应付金额：<input type="text" id="amountPayable" name="amountPayable" size="10" class="easyui-validatebox" required="true"/>
  					</td>
  					<td>
  						&nbsp;&nbsp;&nbsp;&nbsp;实付金额：<input type="text" id="amountPaid"  name="amountPaid" size="10" class="easyui-validatebox" required="true"/>
@@ -388,8 +388,10 @@
 		   	</tr>
 		   </thead>
 		 </table>
+
+
 		 <div id="tb">
-		 	<div style="padding: 2px">
+		 	<div style="padding: 18px">
 		 		<a href="javascript:openReturnListGoodsAddDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
 		 		<a href="javascript:openReturnListGoodsModifyDialog()" class="easyui-linkbutton" iconCls="icon-edit" plain="true">修改</a>
 		 		<a href="javascript:deleteReturnListGoods()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
